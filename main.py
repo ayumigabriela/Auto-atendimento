@@ -15,13 +15,7 @@
 import lcd
 import time
 import keyboard
-
-
-
-
-def deposit(): #to do
-    lcd.lcd_write("FLUXOGRAMA DE", "DEPOSITO")
-    time.sleep(2)       # wait 2 seconds
+import deposit
 
 def main():
     while True: #infinite loop
@@ -31,7 +25,8 @@ def main():
             lcd.lcd_write("FUTURE CLUB!", "APERTE ENTER")
 
         if keyboard.is_pressed("enter"):
-            deposit()
+            deposit.deposit()
+
 
 
 if __name__ == "__main__":  #if program was executed by user.
